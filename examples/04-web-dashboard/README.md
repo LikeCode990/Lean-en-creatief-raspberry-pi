@@ -253,6 +253,20 @@ curl http://localhost:5000
 
 ⚠️ **Waarschuwing**: Deze applicatie heeft GEEN authenticatie!
 
+Deze applicatie is bedoeld voor educatief gebruik in een vertrouwd netwerk (bijv. thuis). Voor productie of onveilige netwerken:
+
+### Debug Mode
+Debug mode is uitgeschakeld in de code voor veiligheid. Debug mode kan code execution mogelijk maken.
+
+```python
+# Alleen voor development op localhost
+app.run(host='127.0.0.1', port=5000, debug=True)
+
+# Voor productie (standaard in dit voorbeeld)
+app.run(host='0.0.0.0', port=5000, debug=False)
+```
+
+### Authenticatie Toevoegen
 Voor productie gebruik:
 ```python
 # Voeg login toe

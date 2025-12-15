@@ -147,7 +147,9 @@ if __name__ == '__main__':
         print("\nServer gestart op http://0.0.0.0:5000")
         print("Druk Ctrl+C om te stoppen\n")
         
-        app.run(host='0.0.0.0', port=5000, debug=True)
+        # Debug mode uitgeschakeld voor veiligheid
+        # Gebruik debug=True alleen tijdens development op localhost
+        app.run(host='0.0.0.0', port=5000, debug=False)
     except KeyboardInterrupt:
         print("\n\nServer gestopt")
     finally:
