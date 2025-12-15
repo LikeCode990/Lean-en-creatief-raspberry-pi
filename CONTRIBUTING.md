@@ -98,7 +98,7 @@ GPIO.setup(ECHO_PIN, GPIO.IN)
 ### Lesson Materials
 Bij toevoegen van nieuwe lessen:
 - Gebruik bestaande les structuur als template
-- Включ: Leerdoelen, Tijdsduur, Materialen, Theorie, Praktijk
+- Bevat: Leerdoelen, Tijdsduur, Materialen, Theorie, Praktijk
 - Voeg troubleshooting sectie toe
 - Link naar gerelateerde voorbeelden
 
