@@ -69,11 +69,12 @@ Na het voltooien van dit keuzedeel kun je:
 - Temperatuur monitoring
 - Afstand meten met ultrasone sensor
 - Servo motor aansturen
+- **Web Dashboard** - Bestuur je Pi via je browser 🌐
 
 ### Gevorderd
 - Weerstation
 - Smart home systeem
-- IoT dashboard
+- IoT dashboard met real-time data
 
 ## Bronnen
 

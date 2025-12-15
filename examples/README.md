@@ -30,25 +30,31 @@ Elk voorbeeld heeft zijn eigen map met:
 
 ### Gemiddeld
 
-4. **RGB LED** (komt binnenkort)
+4. **[04-web-dashboard](04-web-dashboard/)** - Web Dashboard
+   - Leer: Flask, REST API, HTML/CSS/JavaScript
+   - Hardware: 2 LEDs, 2 weerstanden, DHT22 (optioneel)
+   - Tijd: 45 minuten
+   - **Nieuw!** Bestuur je Pi via je browser 🌐
+
+5. **RGB LED** (komt binnenkort)
    - Leer: Meerdere PWM kanalen
    - Hardware: 1 RGB LED, 3 weerstanden
 
-5. **Ultrasone Sensor** (komt binnenkort)
+6. **Ultrasone Sensor** (komt binnenkort)
    - Leer: Timing, afstand meten
    - Hardware: HC-SR04 sensor
 
-6. **Servo Motor** (komt binnenkort)
+7. **Servo Motor** (komt binnenkort)
    - Leer: PWM voor motoren
    - Hardware: SG90 servo
 
 ### Gevorderd
 
-7. **I2C Display** (komt binnenkort)
+8. **I2C Display** (komt binnenkort)
    - Leer: I2C communicatie
    - Hardware: OLED of LCD display
 
-8. **MQTT Sensor** (komt binnenkort)
+9. **MQTT Sensor** (komt binnenkort)
    - Leer: IoT, netwerk communicatie
    - Hardware: Sensor naar keuze
 
