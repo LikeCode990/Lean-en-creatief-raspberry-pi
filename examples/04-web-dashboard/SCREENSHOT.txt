@@ -1,0 +1,63 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    🍓 Raspberry Pi Dashboard                             ║
+║                  Bestuur je Raspberry Pi via je browser                  ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+┌────────────────────────────────────────────────────────────────────────┐
+│  📊 Sensor Data                                                        │
+├────────────────────────────────────────────────────────────────────────┤
+│                                                                        │
+│  Temperatuur:         21.5  °C                                        │
+│  Luchtvochtigheid:    45.0  %                                         │
+│  Laatste update:      2025-12-15 14:30:00                             │
+│                                                                        │
+│  ✅ Sensor actief                                                      │
+│                                                                        │
+│  ┌──────────────────────────────────────────┐                        │
+│  │      🔄 Ververs Data                      │                        │
+│  └──────────────────────────────────────────┘                        │
+└────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────────────────┐
+│  💡 LED Besturing                                                      │
+├────────────────────────────────────────────────────────────────────────┤
+│                                                                        │
+│  LED 1 (GPIO 18)                                    🟡 (AAN)          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐                           │
+│  │  Toggle  │  │   Aan    │  │   Uit    │                           │
+│  └──────────┘  └──────────┘  └──────────┘                           │
+│                                                                        │
+│  LED 2 (GPIO 23)                                    ⚪ (UIT)          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐                           │
+│  │  Toggle  │  │   Aan    │  │   Uit    │                           │
+│  └──────────┘  └──────────┘  └──────────┘                           │
+└────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────────────────┐
+│  ℹ️  Informatie                                                        │
+├────────────────────────────────────────────────────────────────────────┤
+│                                                                        │
+│  Hoe werkt dit?                                                        │
+│  • Sensor data wordt automatisch elke 5 seconden vernieuwd            │
+│  • Klik op de knoppen om LEDs te bedienen                             │
+│  • De LED indicator toont de huidige status                            │
+│  • Werkt op elk apparaat met een browser                               │
+│                                                                        │
+│  Hardware vereist:                                                     │
+│  • LED op GPIO 18 (met 220Ω weerstand)                                │
+│  • LED op GPIO 23 (met 220Ω weerstand)                                │
+│  • DHT22 sensor op GPIO 4 (optioneel)                                 │
+└────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+    Lean en Creatief Raspberry Pi - Web Dashboard
+═══════════════════════════════════════════════════════════════════════════
+
+Features:
+✓ Real-time sensor monitoring
+✓ Remote LED control
+✓ Auto-refresh every 5 seconds
+✓ Responsive design (works on mobile!)
+✓ Keyboard shortcuts (Space=refresh, 1=LED1, 2=LED2)
+✓ Modern, colorful UI with animations
+✓ REST API for integration

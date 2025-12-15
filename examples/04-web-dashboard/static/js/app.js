@@ -14,9 +14,13 @@ function refreshSensorData() {
     fetch('/api/sensor')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('temperature').textContent = data.temperature.toFixed(1);
-            document.getElementById('humidity').textContent = data.humidity.toFixed(1);
-            document.getElementById('timestamp').textContent = data.timestamp;
+            // Veilig omgaan met mogelijk null/undefined waarden
+            const temp = (data.temperature != null) ? data.temperature.toFixed(1) : '--';
+            const hum = (data.humidity != null) ? data.humidity.toFixed(1) : '--';
+            
+            document.getElementById('temperature').textContent = temp;
+            document.getElementById('humidity').textContent = hum;
+            document.getElementById('timestamp').textContent = data.timestamp || '--';
             
             // Status indicator
             const statusEl = document.getElementById('status');
@@ -117,20 +121,26 @@ function updateLEDStatus() {
 
 // Keyboard shortcuts
 document.addEventListener('keydown', (event) => {
-    // Spatiebalk = refresh sensor data
-    if (event.code === 'Space' && event.target === document.body) {
+    // Check of target een input element is
+    const isInputElement = event.target.tagName === 'INPUT' || 
+                          event.target.tagName === 'TEXTAREA' || 
+                          event.target.tagName === 'SELECT' ||
+                          event.target.isContentEditable;
+    
+    // Spatiebalk = refresh sensor data (alleen als niet in input veld)
+    if (event.code === 'Space' && !isInputElement) {
         event.preventDefault();
         refreshSensorData();
         console.log('Sensor data handmatig vernieuwd (spatiebalk)');
     }
     
-    // 1 = toggle LED 1
-    if (event.key === '1') {
+    // 1 = toggle LED 1 (werkt altijd)
+    if (event.key === '1' && !isInputElement) {
         toggleLED(1);
     }
     
-    // 2 = toggle LED 2
-    if (event.key === '2') {
+    // 2 = toggle LED 2 (werkt altijd)
+    if (event.key === '2' && !isInputElement) {
         toggleLED(2);
     }
 });
