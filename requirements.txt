@@ -1,0 +1,13 @@
+# Python Requirements voor Lean en Creatief Raspberry Pi
+# Installeer met: pip3 install -r requirements.txt
+
+# GPIO Control Library
+RPi.GPIO>=0.7.1
+
+# Alternatieve GPIO libraries (optioneel)
+# gpiozero>=1.6.2
+# pigpio>=1.78
+
+# Voor gevorderde projecten (optioneel)
+# numpy>=1.21.0  # Voor data processing
+# matplotlib>=3.5.0  # Voor visualisatie
