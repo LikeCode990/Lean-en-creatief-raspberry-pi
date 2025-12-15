@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍓 Raspberry Pi Dashboard</h1>
+            <p>Bestuur je Raspberry Pi via je browser</p>
+        </header>
+
+        <div class="dashboard">
+            <!-- Sensor Data Section -->
+            <div class="card">
+                <h2>📊 Sensor Data</h2>
+                <div class="sensor-data">
+                    <div class="sensor-item">
+                        <span class="sensor-label">Temperatuur:</span>
+                        <span class="sensor-value" id="temperature">--</span>
+                        <span class="sensor-unit">°C</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-label">Luchtvochtigheid:</span>
+                        <span class="sensor-value" id="humidity">--</span>
+                        <span class="sensor-unit">%</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-label">Laatste update:</span>
+                        <span class="sensor-value" id="timestamp">--</span>
+                    </div>
+                    <div class="sensor-status" id="status"></div>
+                </div>
+                <button onclick="refreshSensorData()" class="btn btn-primary">🔄 Ververs Data</button>
+            </div>
+
+            <!-- LED Controls Section -->
+            <div class="card">
+                <h2>💡 LED Besturing</h2>
+                <div class="led-controls">
+                    <div class="led-control">
+                        <div class="led-info">
+                            <h3>LED 1 (GPIO 18)</h3>
+                            <div class="led-indicator" id="led1-indicator"></div>
+                        </div>
+                        <div class="led-buttons">
+                            <button onclick="toggleLED(1)" class="btn btn-toggle">Toggle</button>
+                            <button onclick="setLED(1, true)" class="btn btn-success">Aan</button>
+                            <button onclick="setLED(1, false)" class="btn btn-danger">Uit</button>
+                        </div>
+                    </div>
+
+                    <div class="led-control">
+                        <div class="led-info">
+                            <h3>LED 2 (GPIO 23)</h3>
+                            <div class="led-indicator" id="led2-indicator"></div>
+                        </div>
+                        <div class="led-buttons">
+                            <button onclick="toggleLED(2)" class="btn btn-toggle">Toggle</button>
+                            <button onclick="setLED(2, true)" class="btn btn-success">Aan</button>
+                            <button onclick="setLED(2, false)" class="btn btn-danger">Uit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="card">
+                <h2>ℹ️ Informatie</h2>
+                <div class="info-text">
+                    <p><strong>Hoe werkt dit?</strong></p>
+                    <ul>
+                        <li>Sensor data wordt automatisch elke 5 seconden vernieuwd</li>
+                        <li>Klik op de knoppen om LEDs te bedienen</li>
+                        <li>De LED indicator toont de huidige status</li>
+                        <li>Werkt op elk apparaat met een browser</li>
+                    </ul>
+                    <p><strong>Hardware vereist:</strong></p>
+                    <ul>
+                        <li>LED op GPIO 18 (met 220Ω weerstand)</li>
+                        <li>LED op GPIO 23 (met 220Ω weerstand)</li>
+                        <li>DHT22 sensor op GPIO 4 (optioneel)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Lean en Creatief Raspberry Pi - Web Dashboard</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

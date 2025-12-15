@@ -1,0 +1,68 @@
+============================================================
+  🔍 RASPBERRY PI SENSOR DEBUGGER
+============================================================
+
+Selecteer een test:
+
+1. Test GPIO pin (output)
+2. Test GPIO pin (input)
+3. Test DHT22 sensor
+4. Test DHT11 sensor
+5. Test HC-SR04 ultrasone sensor
+6. Test PIR bewegingssensor
+7. Scan I2C devices
+8. Volledige systeem scan
+9. Custom pin test
+0. Afsluiten
+
+Keuze (0-9): 3
+GPIO pin nummer (standaard 4): 4
+
+[14:35:00] 🔍 Test DHT22 sensor op GPIO 4
+[14:35:00] ℹ️   Poging 1: Sensor uitlezen...
+[14:35:01] ℹ️   Temperatuur: 21.5°C
+[14:35:01] ℹ️   Luchtvochtigheid: 45.0%
+[14:35:01] ✅ DHT22 werkt correct!
+
+------------------------------------------------------------
+Druk op Enter voor een nieuwe test...
+
+Keuze (0-9): 5
+TRIG pin (standaard 23): 23
+ECHO pin (standaard 24): 24
+
+[14:36:10] 🔍 Test HC-SR04 sensor (TRIG=23, ECHO=24)
+[14:36:11] ℹ️   Afstand gemeten: 15.3 cm
+[14:36:11] ✅ HC-SR04 sensor werkt correct!
+
+------------------------------------------------------------
+Druk op Enter voor een nieuwe test...
+
+Keuze (0-9): 7
+
+[14:37:20] 🔍 Scan I2C bus voor aangesloten devices
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- 76 --                         
+[14:37:20] ✅ Gevonden devices op adressen: ['0x76']
+
+------------------------------------------------------------
+Druk op Enter voor een nieuwe test...
+
+Keuze (0-9): 0
+[14:38:00] ℹ️  Debugger afgesloten
+
+============================================================
+  📋 TEST SAMENVATTING
+============================================================
+
+✅ Geslaagd: 3
+❌ Mislukt: 0
+⚠️  Waarschuwingen: 0
+
