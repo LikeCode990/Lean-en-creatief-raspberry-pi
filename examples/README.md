@@ -36,25 +36,31 @@ Elk voorbeeld heeft zijn eigen map met:
    - Tijd: 45 minuten
    - **Nieuw!** Bestuur je Pi via je browser 🌐
 
-5. **RGB LED** (komt binnenkort)
+5. **[05-sensor-debugger](05-sensor-debugger/)** - Sensor Debugger
+   - Leer: Hardware debugging, troubleshooting, systematisch testen
+   - Hardware: Afhankelijk van sensor die je wilt testen
+   - Tijd: 20 minuten
+   - **Nieuw!** Debug tool voor alle sensoren 🔍
+
+6. **RGB LED** (komt binnenkort)
    - Leer: Meerdere PWM kanalen
    - Hardware: 1 RGB LED, 3 weerstanden
 
-6. **Ultrasone Sensor** (komt binnenkort)
+7. **Ultrasone Sensor** (komt binnenkort)
    - Leer: Timing, afstand meten
    - Hardware: HC-SR04 sensor
 
-7. **Servo Motor** (komt binnenkort)
+8. **Servo Motor** (komt binnenkort)
    - Leer: PWM voor motoren
    - Hardware: SG90 servo
 
 ### Gevorderd
 
-8. **I2C Display** (komt binnenkort)
+9. **I2C Display** (komt binnenkort)
    - Leer: I2C communicatie
    - Hardware: OLED of LCD display
 
-9. **MQTT Sensor** (komt binnenkort)
+10. **MQTT Sensor** (komt binnenkort)
    - Leer: IoT, netwerk communicatie
    - Hardware: Sensor naar keuze
 
@@ -107,9 +113,14 @@ led.on()
    
    # Verbose Python output
    python3 -v script.py
+   
+   # Gebruik de Sensor Debugger tool!
+   python3 05-sensor-debugger/sensor_debugger.py
    ```
 
 ## Troubleshooting
+
+💡 **Sensor werkt niet?** Gebruik de **[Sensor Debugger](05-sensor-debugger/)** voor systematische diagnose!
 
 ### Script loopt niet
 ```bash
