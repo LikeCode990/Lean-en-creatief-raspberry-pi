@@ -75,8 +75,6 @@ class SensorDebugger:
         except Exception as e:
             self.log(f"GPIO pin {pin} test MISLUKT: {e}", "ERROR")
             return False
-        finally:
-            GPIO.cleanup()
     
     def test_dht_sensor(self, pin=4, sensor_type="DHT22"):
         """Test DHT11/DHT22 sensor"""
@@ -144,6 +142,10 @@ class SensorDebugger:
             # Meet echo tijd
             timeout = time.time() + 1  # 1 seconde timeout
             
+            # Initialiseer variabelen
+            pulse_start = time.time()
+            pulse_end = time.time()
+            
             # Wacht op echo HIGH
             while GPIO.input(echo_pin) == 0:
                 pulse_start = time.time()
@@ -177,8 +179,6 @@ class SensorDebugger:
         except Exception as e:
             self.log(f"Ultrasone sensor test MISLUKT: {e}", "ERROR")
             return False
-        finally:
-            GPIO.cleanup()
     
     def test_pir_sensor(self, pin=17, duration=5):
         """Test PIR bewegingssensor"""
@@ -210,8 +210,6 @@ class SensorDebugger:
         except Exception as e:
             self.log(f"PIR sensor test MISLUKT: {e}", "ERROR")
             return False
-        finally:
-            GPIO.cleanup()
     
     def test_i2c_devices(self):
         """Scan I2C bus voor devices"""
@@ -233,7 +231,8 @@ class SensorDebugger:
                         if len(part) == 2 and part != '--':
                             try:
                                 addresses.append(int(part, 16))
-                            except:
+                            except ValueError:
+                                # Niet een geldig hex getal, overslaan
                                 pass
                 
                 if addresses:
