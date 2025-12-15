@@ -159,7 +159,7 @@ import pandas as pd
 9. Machine learning voor voorspelling
 10. Mobile app notificaties
 
-##Voorbeeld Output
+## Voorbeeld Output
 
 ### Console
 ```
